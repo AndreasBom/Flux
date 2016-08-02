@@ -5,6 +5,7 @@
 ###Teknikval   
 Backend:   
 * C#, ASP.NET MVC5, Web-API   
+   
 Frontend:    
 * Steg 1: Angular 1.5, JQuery, Sass, Bootstrap, responsiv   
 * Steg 2: IOS, Android   
