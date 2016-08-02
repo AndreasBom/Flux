@@ -8,7 +8,7 @@ Backend:
    
 Frontend:    
 * Steg 1: Angular 1.5, JQuery, Sass, Bootstrap, responsiv   
-* Steg 2: IOS, Android   
+* Steg 2: IOS, Android (Xamarin)    
 
 ###Baskrav   
 * B1 Appen ska kunna hämta data från närliggande väderstationer och visa väderdata (vindhastighet, vindriktning, temperatur) ett visst antal timmar tillbaka
