@@ -114,3 +114,45 @@ DEBUG 2016-08-03 22:50:15,596 [100  ] Abp.Web.SignalR.Hubs.AbpCommonHub        -
 DEBUG 2016-08-03 22:54:35,624 [108  ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 0de7529f-8ded-4a7a-bef6-6f463607534f
 DEBUG 2016-08-03 22:54:36,757 [109  ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"0a5a287b-d1fe-49bd-9a6e-972f70500e43","IpAddress":"::1","TenantId":1,"UserId":2,"ConnectTime":"2016-08-03T22:54:36.7577408+02:00","Properties":{}}
 DEBUG 2016-08-03 22:54:36,772 [122  ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 0a5a287b-d1fe-49bd-9a6e-972f70500e43
+DEBUG 2016-08-08 21:53:30,535 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-08-08 21:53:32,821 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2016-08-08 21:53:32,826 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Flux.Web.FluxWebModule, Flux.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-08 21:53:32,828 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Flux.FluxDataModule, Flux.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-08 21:53:32,829 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.10.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-08 21:53:32,829 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.10.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-08 21:53:32,829 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.10.3.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-08 21:53:32,829 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.10.3.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-08 21:53:32,830 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Flux.FluxCoreModule, Flux.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-08 21:53:32,830 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Flux.FluxApplicationModule, Flux.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-08 21:53:32,830 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.10.3.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-08 21:53:32,830 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Flux.Api.FluxWebApiModule, Flux.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-08 21:53:32,830 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.10.3.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-08 21:53:32,831 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.10.3.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-08 21:53:32,831 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=0.10.3.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-08 21:53:32,831 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=0.10.3.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-08 21:53:32,831 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.10.3.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-08 21:53:32,833 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2016-08-08 21:53:36,298 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-08-08 21:53:36,298 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-08-08 21:53:36,298 [1    ] o.Configuration.LanguageManagementConfig - Converted Flux (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-08-08 21:53:36,298 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-08-08 21:53:37,581 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: Flux.EntityFramework.FluxDbContext, Flux.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-08-08 21:53:39,086 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2016-08-08 21:53:39,146 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-08-08 21:53:39,168 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2016-08-08 21:53:39,179 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Flux
+DEBUG 2016-08-08 21:53:39,218 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-08-08 21:53:39,436 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-08-08 21:53:39,459 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 7 classes defines auto mapping attributes
+DEBUG 2016-08-08 21:53:39,459 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Flux.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2016-08-08 21:53:40,081 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Flux.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2016-08-08 21:53:40,082 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Flux.Sessions.Dto.UserLoginInfoDto
+DEBUG 2016-08-08 21:53:40,087 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Flux.Users.Dto.CreateUserInput
+DEBUG 2016-08-08 21:53:40,231 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Flux.Users.Dto.UserListDto
+DEBUG 2016-08-08 21:53:40,234 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Flux.MultiTenancy.Dto.CreateTenantInput
+DEBUG 2016-08-08 21:53:40,260 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Flux.MultiTenancy.Dto.TenantListDto
+DEBUG 2016-08-08 21:53:42,150 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Flux.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2016-08-08 21:53:42,151 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Flux.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2016-08-08 21:53:42,152 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Flux.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2016-08-08 21:53:42,153 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Flux.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2016-08-08 21:54:11,664 [13   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"7e98e321-0e94-4a9f-bb3f-9319e6929e63","IpAddress":"::1","TenantId":1,"UserId":2,"ConnectTime":"2016-08-08T21:54:11.6417341+02:00","Properties":{}}
