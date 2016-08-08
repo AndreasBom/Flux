@@ -1,0 +1,3 @@
+[submodule "WeatherBase"]
+	path = WeatherBase
+	url = git@github.com:AndreasBom/WeatherBase.git
