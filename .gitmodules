@@ -1,0 +1,3 @@
+[submodule "Flux.Core/WeatherService/WeatherBase"]
+	path = Flux.Core/WeatherService/WeatherBase
+	url = git@github.com:AndreasBom/WeatherBase.git
