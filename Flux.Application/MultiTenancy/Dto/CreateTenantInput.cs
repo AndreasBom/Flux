@@ -1,8 +1,8 @@
 using System.ComponentModel.DataAnnotations;
 using Abp.Application.Services.Dto;
+using Abp.Authorization.Users;
 using Abp.AutoMapper;
 using Abp.MultiTenancy;
-using Flux.Users;
 
 namespace Flux.MultiTenancy.Dto
 {
@@ -19,7 +19,7 @@ namespace Flux.MultiTenancy.Dto
         public string Name { get; set; }
 
         [Required]
-        [StringLength(User.MaxEmailAddressLength)]
+        [StringLength(AbpUserBase.MaxEmailAddressLength)]
         public string AdminEmailAddress { get; set; }
 
         [MaxLength(AbpTenantBase.MaxConnectionStringLength)]

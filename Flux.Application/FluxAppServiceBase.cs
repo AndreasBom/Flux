@@ -10,18 +10,18 @@ using Microsoft.AspNet.Identity;
 namespace Flux
 {
     /// <summary>
-    /// Derive your application services from this class.
+    ///     Derive your application services from this class.
     /// </summary>
     public abstract class FluxAppServiceBase : ApplicationService
     {
-        public TenantManager TenantManager { get; set; }
-
-        public UserManager UserManager { get; set; }
-
         protected FluxAppServiceBase()
         {
             LocalizationSourceName = FluxConsts.LocalizationSourceName;
         }
+
+        public TenantManager TenantManager { get; set; }
+
+        public UserManager UserManager { get; set; }
 
         protected virtual Task<User> GetCurrentUserAsync()
         {

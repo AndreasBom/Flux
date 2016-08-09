@@ -11,11 +11,12 @@ using Microsoft.AspNet.Identity;
 namespace Flux.Users
 {
     /* THIS IS JUST A SAMPLE. */
+
     [AbpAuthorize(PermissionNames.Pages_Users)]
     public class UserAppService : FluxAppServiceBase, IUserAppService
     {
-        private readonly IRepository<User, long> _userRepository;
         private readonly IPermissionManager _permissionManager;
+        private readonly IRepository<User, long> _userRepository;
 
         public UserAppService(IRepository<User, long> userRepository, IPermissionManager permissionManager)
         {

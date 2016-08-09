@@ -81,6 +81,20 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=4.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Primitives.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
     <Reference Include="System.Runtime.Caching" />
     <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
@@ -101,19 +115,93 @@
     <Compile Include="Features\FeatureValueStore.cs" />
     <Compile Include="MultiTenancy\Tenant.cs" />
     <Compile Include="MultiTenancy\TenantManager.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Authorization\Roles\Role.cs" />
     <Compile Include="Authorization\Roles\RoleManager.cs" />
     <Compile Include="Authorization\Roles\RoleStore.cs" />
     <Compile Include="Users\User.cs" />
     <Compile Include="Users\UserManager.cs" />
     <Compile Include="Users\UserStore.cs" />
+    <Compile Include="WeatherService\WeatherBase\SmhiNet\Interfaces\ICachedData.cs" />
+    <Compile Include="WeatherService\WeatherBase\SmhiNet\Interfaces\IHttpFetcher.cs" />
+    <Compile Include="WeatherService\WeatherBase\SmhiNet\Interfaces\IWeatherForcast.cs" />
+    <Compile Include="WeatherService\WeatherBase\SmhiNet\Interfaces\IWeatherObservation.cs" />
+    <Compile Include="WeatherService\WeatherBase\SmhiNet\Lib\Forcast\WeatherForcast.cs" />
+    <Compile Include="WeatherService\WeatherBase\SmhiNet\Lib\Observation\WeatherObservation.cs" />
+    <Compile Include="WeatherService\WeatherBase\SmhiNet\Models\ForcastModel.cs" />
+    <Compile Include="WeatherService\WeatherBase\SmhiNet\Models\ObservationModel.cs" />
+    <Compile Include="WeatherService\WeatherBase\SmhiNet\Models\ParameterModel.cs" />
+    <Compile Include="WeatherService\WeatherBase\SmhiNet\Models\WeatherStationModel.cs" />
+    <Compile Include="WeatherService\WeatherBase\SmhiNet\obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="WeatherService\WeatherBase\SmhiNet\obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="WeatherService\WeatherBase\SmhiNet\obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="WeatherService\WeatherBase\SmhiNet\Repositories\Base\HttpClientFetcher.cs" />
+    <Compile Include="WeatherService\WeatherBase\SmhiNet\Repositories\CachedDataRepository.cs" />
+    <Compile Include="WeatherService\WeatherBase\SmhiNet\Repositories\WeatherForcastRepository.cs" />
+    <Compile Include="WeatherService\WeatherBase\SmhiNet\Repositories\WeatherObservationRepository.cs" />
+    <Compile Include="WeatherService\WeatherBase\SmhiNet\Services\CachedData.cs" />
+    <Compile Include="WeatherService\WeatherBase\SmhiNet\Services\Converter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
+    <None Include="WeatherService\WeatherBase\.nuget\NuGet.Config" />
+    <None Include="WeatherService\WeatherBase\.nuget\NuGet.targets" />
+    <None Include="WeatherService\WeatherBase\.vs\config\applicationhost.config" />
+    <None Include="WeatherService\WeatherBase\LICENSE" />
+    <None Include="WeatherService\WeatherBase\packages\Antlr.3.4.1.9004\Antlr.3.4.1.9004.nupkg" />
+    <None Include="WeatherService\WeatherBase\packages\bootstrap.3.3.4\bootstrap.3.3.4.nupkg" />
+    <None Include="WeatherService\WeatherBase\packages\bootstrap.3.3.4\content\Content\bootstrap-theme.css.map" />
+    <None Include="WeatherService\WeatherBase\packages\bootstrap.3.3.4\content\Content\bootstrap.css.map" />
+    <None Include="WeatherService\WeatherBase\packages\bootstrap.3.3.4\content\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="WeatherService\WeatherBase\packages\bootstrap.3.3.4\content\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="WeatherService\WeatherBase\packages\bootstrap.3.3.4\content\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="WeatherService\WeatherBase\packages\bootstrap.3.3.4\content\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="WeatherService\WeatherBase\packages\Castle.Core.3.3.3\Castle.Core.3.3.3.nupkg" />
+    <None Include="WeatherService\WeatherBase\packages\jQuery.1.9.1\Content\Scripts\jquery-1.9.1.min.map" />
+    <None Include="WeatherService\WeatherBase\packages\jQuery.1.9.1\jQuery.1.9.1.nupkg" />
+    <None Include="WeatherService\WeatherBase\packages\jQuery.1.9.1\Tools\common.ps1" />
+    <None Include="WeatherService\WeatherBase\packages\jQuery.1.9.1\Tools\install.ps1" />
+    <None Include="WeatherService\WeatherBase\packages\jQuery.1.9.1\Tools\uninstall.ps1" />
+    <None Include="WeatherService\WeatherBase\packages\Microsoft.AspNet.Web.Optimization.1.1.3\Microsoft.AspNet.Web.Optimization.1.1.3.nupkg" />
+    <None Include="WeatherService\WeatherBase\packages\Microsoft.AspNet.WebApi.Client.5.2.3\Microsoft.AspNet.WebApi.Client.5.2.3.nupkg" />
+    <None Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.1.1.10\lib\monoandroid\_._" />
+    <None Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.1.1.10\lib\monotouch\_._" />
+    <None Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.1.1.10\lib\net45\_._" />
+    <None Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.1.1.10\lib\portable-net45+win8+wp8+wpa81\_._" />
+    <None Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.1.1.10\lib\portable-net45+win8+wpa81\_._" />
+    <None Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.1.1.10\lib\portable-net451+win81+wpa81\_._" />
+    <None Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.1.1.10\lib\portable-net451+win81\_._" />
+    <None Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.1.1.10\lib\portable-win81+wp81+wpa81\_._" />
+    <None Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.1.1.10\lib\win8\_._" />
+    <None Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.1.1.10\lib\wp8\_._" />
+    <None Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.1.1.10\lib\wpa81\_._" />
+    <None Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.1.1.10\lib\Xamarin.iOS10\_._" />
+    <None Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.1.1.10\License-Stable.rtf" />
+    <None Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.1.1.10\Microsoft.Bcl.1.1.10.nupkg" />
+    <None Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.Async.1.0.168\License-Stable.rtf" />
+    <None Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.Async.1.0.168\Microsoft.Bcl.Async.1.0.168.nupkg" />
+    <None Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" />
+    <None Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.Build.1.0.21\License-Stable.rtf" />
+    <None Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.Build.1.0.21\Microsoft.Bcl.Build.1.0.21.nupkg" />
+    <None Include="WeatherService\WeatherBase\packages\Microsoft.Net.Http.2.2.29\License-Stable.rtf" />
+    <None Include="WeatherService\WeatherBase\packages\Microsoft.Net.Http.2.2.29\Microsoft.Net.Http.2.2.29.nupkg" />
+    <None Include="WeatherService\WeatherBase\packages\Microsoft.Web.Infrastructure.1.0.0.0\Microsoft.Web.Infrastructure.1.0.0.0.nupkg" />
+    <None Include="WeatherService\WeatherBase\packages\Moq.4.5.16\Moq.4.5.16.nupkg" />
+    <None Include="WeatherService\WeatherBase\packages\Newtonsoft.Json.6.0.4\Newtonsoft.Json.6.0.4.nupkg" />
+    <None Include="WeatherService\WeatherBase\packages\Newtonsoft.Json.6.0.4\tools\install.ps1" />
+    <None Include="WeatherService\WeatherBase\packages\Newtonsoft.Json.9.0.1\Newtonsoft.Json.9.0.1.nupkg" />
+    <None Include="WeatherService\WeatherBase\packages\Newtonsoft.Json.9.0.1\tools\install.ps1" />
+    <None Include="WeatherService\WeatherBase\packages\WebGrease.1.5.2\tools\install.ps1" />
+    <None Include="WeatherService\WeatherBase\packages\WebGrease.1.5.2\tools\uninstall.ps1" />
+    <None Include="WeatherService\WeatherBase\packages\WebGrease.1.5.2\WebGrease.1.5.2.nupkg" />
+    <None Include="WeatherService\WeatherBase\README.md" />
+    <None Include="WeatherService\WeatherBase\SmhiNet\app.config" />
+    <None Include="WeatherService\WeatherBase\SmhiNet\bin\Debug\SmhiNet.dll.config" />
+    <None Include="WeatherService\WeatherBase\SmhiNet\ClassDiagram1.cd" />
+    <None Include="WeatherService\WeatherBase\SmhiNet\obj\Debug\SmhiNet.csproj.App.config" />
+    <None Include="WeatherService\WeatherBase\SmhiNet\packages.config" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Localization\Source\Flux-zh-CN.xml" />
@@ -134,6 +222,156 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Localization\Source\Flux-ja.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="WeatherService\WeatherBase\.gitignore" />
+    <Content Include="WeatherService\WeatherBase\.nuget\NuGet.exe" />
+    <Content Include="WeatherService\WeatherBase\packages\bootstrap.3.3.4\content\Content\bootstrap-theme.css" />
+    <Content Include="WeatherService\WeatherBase\packages\bootstrap.3.3.4\content\Content\bootstrap-theme.min.css" />
+    <Content Include="WeatherService\WeatherBase\packages\bootstrap.3.3.4\content\Content\bootstrap.css" />
+    <Content Include="WeatherService\WeatherBase\packages\bootstrap.3.3.4\content\Content\bootstrap.min.css" />
+    <Content Include="WeatherService\WeatherBase\packages\bootstrap.3.3.4\content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="WeatherService\WeatherBase\packages\bootstrap.3.3.4\content\Icon.png" />
+    <Content Include="WeatherService\WeatherBase\packages\bootstrap.3.3.4\content\Scripts\bootstrap.js" />
+    <Content Include="WeatherService\WeatherBase\packages\bootstrap.3.3.4\content\Scripts\bootstrap.min.js" />
+    <Content Include="WeatherService\WeatherBase\packages\bootstrap.3.3.4\content\Scripts\npm.js" />
+    <Content Include="WeatherService\WeatherBase\packages\Castle.Core.3.3.3\ASL - Apache Software Foundation License.txt" />
+    <Content Include="WeatherService\WeatherBase\packages\Castle.Core.3.3.3\BreakingChanges.txt" />
+    <Content Include="WeatherService\WeatherBase\packages\Castle.Core.3.3.3\Changes.txt" />
+    <Content Include="WeatherService\WeatherBase\packages\Castle.Core.3.3.3\lib\net35\Castle.Core.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Castle.Core.3.3.3\lib\net40-client\Castle.Core.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Castle.Core.3.3.3\lib\net45\Castle.Core.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Castle.Core.3.3.3\lib\sl4\Castle.Core.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Castle.Core.3.3.3\lib\sl5\Castle.Core.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Castle.Core.3.3.3\License.txt" />
+    <Content Include="WeatherService\WeatherBase\packages\Castle.Core.3.3.3\readme.txt" />
+    <Content Include="WeatherService\WeatherBase\packages\jQuery.1.9.1\Content\Scripts\jquery-1.9.1-vsdoc.js" />
+    <Content Include="WeatherService\WeatherBase\packages\jQuery.1.9.1\Content\Scripts\jquery-1.9.1.js" />
+    <Content Include="WeatherService\WeatherBase\packages\jQuery.1.9.1\Content\Scripts\jquery-1.9.1.min.js" />
+    <Content Include="WeatherService\WeatherBase\packages\jQuery.1.9.1\Tools\jquery-1.9.1.intellisense.js" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\system.web.optimization.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\portable-wp8+netcore45+net45+wp81+wpa81\System.Net.Http.Formatting.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.1.1.10\lib\net40\ensureRedirect.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.1.1.10\lib\net40\System.IO.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.1.1.10\lib\net40\System.Runtime.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.1.1.10\lib\net40\System.Threading.Tasks.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl4+win8+wp71+wpa81\ensureRedirect.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl4+win8+wp71+wpa81\System.IO.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl4+win8+wp71+wpa81\System.Runtime.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl4+win8+wp71+wpa81\System.Threading.Tasks.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl4+win8+wp8+wpa81\ensureRedirect.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl4+win8+wp8+wpa81\System.IO.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl4+win8+wp8+wpa81\System.Runtime.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl4+win8+wp8+wpa81\System.Threading.Tasks.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl4+win8\ensureRedirect.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl4+win8\System.IO.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl4+win8\System.Runtime.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl4+win8\System.Threading.Tasks.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl5+win8+wp8+wpa81\ensureRedirect.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl5+win8+wp8+wpa81\System.IO.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl5+win8+wp8+wpa81\System.Runtime.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl5+win8+wp8+wpa81\System.Threading.Tasks.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+win8+wp8+wpa81\ensureRedirect.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+win8+wp8+wpa81\System.IO.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+win8+wp8+wpa81\System.Runtime.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+win8+wp8+wpa81\System.Threading.Tasks.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+win8\ensureRedirect.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+win8\System.IO.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+win8\System.Runtime.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+win8\System.Threading.Tasks.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.1.1.10\lib\sl4-windowsphone71\ensureRedirect.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.1.1.10\lib\sl4-windowsphone71\System.IO.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.1.1.10\lib\sl4-windowsphone71\System.Runtime.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.1.1.10\lib\sl4-windowsphone71\System.Threading.Tasks.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.1.1.10\lib\sl4\System.IO.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.1.1.10\lib\sl4\System.Runtime.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.1.1.10\lib\sl4\System.Threading.Tasks.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.1.1.10\lib\sl5\System.IO.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.1.1.10\lib\sl5\System.Runtime.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.1.1.10\lib\sl5\System.Threading.Tasks.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.Desktop.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.Async.1.0.168\lib\portable-net40+sl4+win8+wp71+wpa81\Microsoft.Threading.Tasks.Extensions.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.Async.1.0.168\lib\portable-net40+sl4+win8+wp71+wpa81\Microsoft.Threading.Tasks.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.Async.1.0.168\lib\portable-net45+win8+wp8+wpa81\Microsoft.Threading.Tasks.Extensions.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.Async.1.0.168\lib\portable-net45+win8+wp8+wpa81\Microsoft.Threading.Tasks.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.Async.1.0.168\lib\portable-net45+win8+wpa81\Microsoft.Threading.Tasks.Extensions.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.Async.1.0.168\lib\portable-net45+win8+wpa81\Microsoft.Threading.Tasks.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.Async.1.0.168\lib\sl4-windowsphone71\Microsoft.Threading.Tasks.Extensions.Phone.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.Async.1.0.168\lib\sl4-windowsphone71\Microsoft.Threading.Tasks.Extensions.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.Async.1.0.168\lib\sl4-windowsphone71\Microsoft.Threading.Tasks.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.Async.1.0.168\lib\sl4\Microsoft.Threading.Tasks.Extensions.Silverlight.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.Async.1.0.168\lib\sl4\Microsoft.Threading.Tasks.Extensions.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.Async.1.0.168\lib\sl4\Microsoft.Threading.Tasks.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.Async.1.0.168\lib\win8\Microsoft.Threading.Tasks.Extensions.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.Async.1.0.168\lib\win8\Microsoft.Threading.Tasks.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.Async.1.0.168\lib\wp8\Microsoft.Threading.Tasks.Extensions.Phone.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.Async.1.0.168\lib\wp8\Microsoft.Threading.Tasks.Extensions.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.Async.1.0.168\lib\wp8\Microsoft.Threading.Tasks.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.Async.1.0.168\lib\wpa81\Microsoft.Threading.Tasks.Extensions.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Bcl.Async.1.0.168\lib\wpa81\Microsoft.Threading.Tasks.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Net.Http.2.2.29\lib\monoandroid\System.Net.Http.Extensions.XML" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Net.Http.2.2.29\lib\monoandroid\System.Net.Http.Primitives.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Net.Http.2.2.29\lib\monotouch\System.Net.Http.Extensions.XML" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Net.Http.2.2.29\lib\monotouch\System.Net.Http.Primitives.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Net.Http.2.2.29\lib\net40\ensureRedirect.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Net.Http.2.2.29\lib\net40\System.Net.Http.Extensions.XML" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Net.Http.2.2.29\lib\net40\System.Net.Http.Primitives.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Net.Http.2.2.29\lib\net40\System.Net.Http.WebRequest.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Net.Http.2.2.29\lib\net40\System.Net.Http.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Net.Http.2.2.29\lib\net45\ensureRedirect.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Extensions.XML" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Primitives.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Net.Http.2.2.29\lib\portable-net40+sl4+win8+wp71+wpa81\ensureRedirect.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Net.Http.2.2.29\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.Extensions.XML" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Net.Http.2.2.29\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.Primitives.XML" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Net.Http.2.2.29\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Net.Http.2.2.29\lib\portable-net45+win8+wpa81\ensureRedirect.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Net.Http.2.2.29\lib\portable-net45+win8+wpa81\System.Net.Http.Extensions.XML" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Net.Http.2.2.29\lib\portable-net45+win8+wpa81\System.Net.Http.Primitives.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Net.Http.2.2.29\lib\portable-net45+win8\ensureRedirect.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Net.Http.2.2.29\lib\portable-net45+win8\System.Net.Http.Extensions.XML" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Net.Http.2.2.29\lib\portable-net45+win8\System.Net.Http.Primitives.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Net.Http.2.2.29\lib\sl4-windowsphone71\System.Net.Http.Extensions.XML" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Net.Http.2.2.29\lib\sl4-windowsphone71\System.Net.Http.Primitives.XML" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Net.Http.2.2.29\lib\sl4-windowsphone71\System.Net.Http.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Net.Http.2.2.29\lib\win8\System.Net.Http.Extensions.XML" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Net.Http.2.2.29\lib\win8\System.Net.Http.Primitives.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Net.Http.2.2.29\lib\wpa81\System.Net.Http.Extensions.XML" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Net.Http.2.2.29\lib\wpa81\System.Net.Http.Primitives.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Net.Http.2.2.29\lib\Xamarin.iOS10\System.Net.Http.Extensions.XML" />
+    <Content Include="WeatherService\WeatherBase\packages\Microsoft.Net.Http.2.2.29\lib\Xamarin.iOS10\System.Net.Http.Primitives.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Moq.4.5.16\lib\net45\Moq.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Newtonsoft.Json.6.0.4\lib\net20\Newtonsoft.Json.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Newtonsoft.Json.6.0.4\lib\net35\Newtonsoft.Json.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Newtonsoft.Json.6.0.4\lib\net40\Newtonsoft.Json.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Newtonsoft.Json.6.0.4\lib\netcore45\Newtonsoft.Json.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Newtonsoft.Json.6.0.4\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Newtonsoft.Json.6.0.4\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Newtonsoft.Json.9.0.1\lib\net20\Newtonsoft.Json.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Newtonsoft.Json.9.0.1\lib\net35\Newtonsoft.Json.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Newtonsoft.Json.9.0.1\lib\net40\Newtonsoft.Json.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Newtonsoft.Json.9.0.1\lib\netstandard1.0\Newtonsoft.Json.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Newtonsoft.Json.9.0.1\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.xml" />
+    <Content Include="WeatherService\WeatherBase\packages\Newtonsoft.Json.9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.xml" />
+    <Content Include="WeatherService\WeatherBase\SmhiNet\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.xml" />
+    <Content Include="WeatherService\WeatherBase\SmhiNet\bin\Debug\Microsoft.Threading.Tasks.Extensions.xml" />
+    <Content Include="WeatherService\WeatherBase\SmhiNet\bin\Debug\Microsoft.Threading.Tasks.xml" />
+    <Content Include="WeatherService\WeatherBase\SmhiNet\bin\Debug\Newtonsoft.Json.xml" />
+    <Content Include="WeatherService\WeatherBase\SmhiNet\bin\Debug\System.Net.Http.Extensions.xml" />
+    <Content Include="WeatherService\WeatherBase\SmhiNet\bin\Debug\System.Net.Http.Formatting.xml" />
+    <Content Include="WeatherService\WeatherBase\SmhiNet\bin\Debug\System.Net.Http.Primitives.xml" />
+    <Content Include="WeatherService\WeatherBase\SmhiNet\obj\Debug\SmhiNet.csproj.FileListAbsolute.txt" />
+    <Content Include="WeatherService\WeatherBase\SmhiNet\SmhiNet.csproj" />
+    <Content Include="WeatherService\WeatherBase\WeatherBase.sln" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+    <Folder Include="WeatherService\WeatherBase\SmhiNet\Properties\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
